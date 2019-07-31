@@ -1,0 +1,41 @@
+header {
+    background-color: $light;
+    padding: 10px 20px 0 20px;
+    border-bottom: 1px solid $grey;
+    a {
+        margin-right: 50px;
+
+    }
+    .mat-raised-button {
+        margin-left: 20px;
+        width: 150px;
+    }
+}
+.testContainer {
+    background-color: $light-grey;
+    padding: 0;
+    min-height: 500px;
+    .search {
+        padding: 20px;
+        .res {
+            border-right:1px solid #ccc;
+        }
+    }
+    .tableTest{
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        text-align: center;
+        tr {
+            border-bottom: 1px solid #ccc;
+            line-height: 2.5;
+            td{
+                width: 33.3%
+            }
+        }
+    }
+
+}
+.welcomeTxt {
+    text-align: center;
+    margin-top: 50px;
+}

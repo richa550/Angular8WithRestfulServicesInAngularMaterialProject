@@ -1,0 +1,16 @@
+<header>    
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+      <div fxFlex="50%">       
+              <a class="navbar-brand" href="javascript:" (click)="goHome()"> Exercise</a>
+              <button mat-raised-button (click)="goSearch('Europe')">Europe</button>
+              <button mat-raised-button (click)="goSearch('Asia')">Asia</button>
+      </div>
+      <div fxFlex="50%">
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Enter Country Code" aria-label="Search" maxlength="50" minlength="2" #searchInput>
+            </mat-form-field>         
+            <button mat-raised-button (click)="goSearch(searchInput.value)" [disabled]="searchInput.value.length < 3">Search</button>
+            <button mat-raised-button (click)="clear()">Clear</button>
+      </div>
+  </div>
+  </header>

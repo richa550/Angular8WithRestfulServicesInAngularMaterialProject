@@ -1,0 +1,31 @@
+
+<section class="search">
+        <div class="row">
+                <div class="col-sm-8 res">
+                        <div *ngIf="resultSuccess">
+                                <h5>Result</h5>  
+                                <table mat-table class="mat-elevation-z8 tableTest" width="100%" >
+                                        <tr  mat-header-row>
+                                                <th mat-header-cell> Name </th>
+                                                <th mat-header-cell> Captials </th>
+                                                <th mat-header-cell> Region </th>
+                                        </tr>
+                                        <tr *ngFor="let item of list;" (click)="selectRow(item.numericCode);"> 
+                                                <td mat-header-column >{{item.name}}</td>
+                                                <td mat-header-column >{{item.capital}}</td>
+                                                <td mat-header-column >{{item.region}}</td>
+                                        </tr>
+                                </table> 
+                        </div> 
+                        <div *ngIf="!resultSuccess"><h5>Something went wrong !!</h5></div>                                                    
+                </div>
+                <div class="col-sm-4">
+                        <div *ngIf= "showData">
+                        <h5>{{selectedCountry.name}}</h5>                         
+                        <p>Area: {{selectedCountry.area}}</p>  
+                       <p>languages: <span *ngFor="let lan of selectedCountry.languages;">{{lan.name}} </span></p> 
+                      <p>population: {{ selectedCountry.population}}</p> 
+                        </div>
+                </div>
+            </div>
+</section>
