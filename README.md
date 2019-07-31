@@ -1,4 +1,4 @@
-# Ng5ScssApp
+# Angular 8 Project (using Scss)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version:
 Angular CLI: 8.1.3
